@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .operatorContainer{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+ <h1>Calculator</h1>
+ <div>
+        <input required type="number" id="firstInt" placeholder="First Integer"/>
+        <input required type="number" id="secInt" placeholder="Sencond Integer"/>
+    
+ </div>
+ 
+ <div class="operatorContainer"> 
+    <button type="submit" onclick="plus()" id="plus">+</button>
+    <button type="submit" onclick="minus()">-</button>
+    <button type="submit" onclick="multiply()">/</button>
+    <button type="submit" onclick="into()">*</button>
+ </div>
+ <div>
+    <h2>Result-</h2>
+    <h2 id="result">0</h2>
+ </div>
+
+<script>
+
+  let firstInt = document.getElementById("firstInt")
+  let secInt = document.getElementById("secInt")
+  let resultValue = document.getElementById("result")
+
+   
+  function plus() {
+    console.log(firstInt.value)
+    resultValue.innerText = Number(firstInt.value) + Number(secInt.value)
+  }
+  function minus() {
+    console.log(firstInt.value)
+    resultValue.innerText = Number(firstInt.value) - Number(secInt.value)
+  }
+  function multiply() {
+    console.log(firstInt.value)
+    resultValue.innerText = Number(firstInt.value) / Number(secInt.value)
+  }
+  function into() {
+    console.log(firstInt.value)
+    resultValue.innerText = Number(firstInt.value) * Number(secInt.value)
+  }
+
+</script>    
+</body>
+</html>
